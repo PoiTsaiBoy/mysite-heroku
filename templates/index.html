@@ -1,11 +1,14 @@
 {% extends "base.html" %}
 {% block title %}hello,world {% endblock %}
+{% block headmessage %} 
 
 {% if request.user.is_authenticated %}
-{% block headmessage %} hello,{{request.user.first_name}}{% endblock %}
+hello,{{request.user.first_name}}
 {% else %}
-{% block headmessage %} hello,Stranger{% endblock %}
+hello,Stranger
 {% endif %}
+
+{% endblock %}
 {% block main %}
   <hr>
       特別號：{{special}}<br>
