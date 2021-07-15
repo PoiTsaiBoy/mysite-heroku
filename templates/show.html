@@ -1,0 +1,19 @@
+{% extends "base.html" %}
+
+{% block title %}hello,world {% endblock %}
+{% block headmessage %} 我的新聞摘要 {% endblock %}
+{% block main %}
+  	<hr>
+  	<table class="table table-striped">
+		<tr>
+			<td>{{post.title}}<br>
+				{{post.pub_date}}
+			</td>
+		</tr>
+		<tr>
+			<td>
+				{{post.body | linebreaks}}
+			</td>
+		</tr>
+  	</table>
+{% endblock %}
